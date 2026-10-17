@@ -1,0 +1,5 @@
+# Fotos pessoais e imagens geradas não vão para o GitHub (o repositório é público).
+fotos/*
+!fotos/.gitkeep
+renders/*
+!renders/.gitkeep

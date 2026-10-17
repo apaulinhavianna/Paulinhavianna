@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Homemade+Apple&family=Inter:wght@400;500;600&family=Noto+Color+Emoji&display=block");
+
+/* Kit visual — tokens */
+:root {
+  --papel: #f5f0e8;
+  --creme: #fbf6ea;
+  --cafe: #5b4636;
+  --tinta: #231f1c;
+  --rosa: #f4a7c3;
+  --manteiga: #fbf3a6;
+  --azul-ios: #2f7bf6;
+  --matcha: #9bb85a;
+  --vinho: #a3243b;
+  --dourado: #e9c46a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; background: var(--papel); }
+body { position: relative; font-family: Inter, sans-serif; color: var(--tinta); }
+.abs { position: absolute; }
+.emoji { font-family: "Noto Color Emoji"; }
+
+/* foto de fundo inteira */
+.foto-fundo { position: absolute; inset: 0; background-size: cover; background-position: center; }
+
+/* textos */
+.t-grosso { font: 800 120px/0.9 "Bricolage Grotesque"; letter-spacing: -0.035em; }
+.t-fino { font: 400 120px/0.85 "Bodoni Moda"; letter-spacing: -0.03em; }
+.t-fino-it { font: italic 400 120px/0.85 "Bodoni Moda"; letter-spacing: -0.02em; }
+.t-mao { font-family: "Homemade Apple"; }
+.sobre-foto { color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+
+/* pílula branca */
+.pill { position: absolute; background: rgba(255,255,255,.96); border-radius: 999px; padding: 12px 26px;
+  font: 500 25px Inter; color: #222; box-shadow: 0 6px 18px rgba(0,0,0,.18); white-space: nowrap; }
+
+/* etiqueta rosa */
+.tag { display: inline-block; background: var(--rosa); font: 600 32px Inter; padding: 4px 14px; margin: 5px; border-radius: 4px; }
+
+/* crachá */
+.cracha { position: absolute; width: 520px; border-radius: 22px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,.3); }
+.cracha .topo { background: var(--manteiga); text-align: center; padding: 26px 20px 18px; }
+.cracha .topo b { display: block; font: 800 88px/0.9 "Bricolage Grotesque"; letter-spacing: -0.04em; }
+.cracha .topo span { font: 500 30px Inter; }
+.cracha .nome { background: #fff; text-align: center; padding: 20px 10px 24px; font: 38px "Homemade Apple"; color: #333; }
+
+/* estrela */
+.estrela { position: absolute; width: 46px; height: 46px; background: var(--dourado);
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25)); }
+
+/* @ manuscrito */
+.arroba { position: absolute; font: 26px "Homemade Apple"; color: rgba(255,255,255,.9); text-shadow: 0 1px 8px rgba(0,0,0,.3); }
+
+/* ---- peças extras ---- */
+.papel-grao::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .16; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+
+/* polaroid */
+.polaroid { position: absolute; background: #fff; padding: 16px 16px 70px; box-shadow: 0 12px 30px rgba(60,40,20,.22); }
+.polaroid .img { width: 100%; height: 100%; background-size: cover; background-position: center; }
+.polaroid .leg { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; font: 26px "Homemade Apple"; color: #555; }
+
+/* fita adesiva */
+.fita { position: absolute; width: 150px; height: 44px; background: rgba(244,167,195,.65); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.fita.amarela { background: rgba(251,243,166,.8); }
+
+/* selo serrilhado */
+.selo { position: absolute; padding: 12px; background: radial-gradient(circle, transparent 7px, var(--creme) 7.5px) -11px -11px / 22px 22px; filter: drop-shadow(0 8px 14px rgba(60,40,20,.2)); }
+.selo .miolo { background: var(--creme); padding: 30px 26px; border: 2px solid #e6dcc8; }
+
+/* balões do iMessage */
+.chat { position: absolute; background: #fff; border-radius: 34px; padding: 34px 30px; box-shadow: 0 16px 40px rgba(60,40,20,.2); }
+.bolha { max-width: 78%; padding: 16px 24px; border-radius: 30px; font: 500 30px Inter; margin: 10px 0; }
+.bolha.cinza { background: #e9e9eb; color: #111; border-bottom-left-radius: 8px; }
+.bolha.azul { background: var(--azul-ios); color: #fff; margin-left: auto; border-bottom-right-radius: 8px; }
+
+/* lista de lembretes do iPhone */
+.lembretes { position: absolute; background: #fff; border-radius: 30px; padding: 30px 34px; box-shadow: 0 16px 40px rgba(60,40,20,.18); }
+.lembretes h4 { font: 700 30px Inter; color: #f2a33a; margin-bottom: 12px; }
+.item { display: flex; align-items: center; gap: 18px; padding: 15px 0; border-bottom: 1px solid #eee; font: 500 31px Inter; }
+.item:last-child { border-bottom: 0; }
+.check { width: 36px; height: 36px; border-radius: 50%; background: #f2a33a; flex: none; position: relative; }
+.check::after { content: ""; position: absolute; left: 12px; top: 6px; width: 9px; height: 17px; border: solid #fff; border-width: 0 4px 4px 0; transform: rotate(45deg); }
+
+/* faixas */
+.faixa-amarela { position: absolute; background: var(--manteiga); font: 800 44px/0.95 "Bricolage Grotesque"; padding: 14px 24px; border: 3px solid var(--tinta); }
+.faixa-azul { position: absolute; background: var(--azul-ios); color: #fff; font: 800 42px/1 "Bricolage Grotesque"; padding: 14px 28px; border: 3px solid #fff; outline: 3px solid var(--azul-ios); }
+
+/* indicador de carrossel */
+.paginas { position: absolute; bottom: 44px; left: 0; right: 0; text-align: center; font: 600 22px Inter; color: var(--cafe); letter-spacing: .2em; }
