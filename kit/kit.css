@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Homemade+Apple&family=Inter:wght@400;500;600&family=Noto+Color+Emoji&display=block");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Homemade+Apple&family=Inter:wght@400;500;600&family=Poppins:wght@600&family=Noto+Color+Emoji&display=block");
 
 /* Kit visual — tokens */
 :root {
@@ -35,7 +35,7 @@ body { position: relative; font-family: Inter, sans-serif; color: var(--tinta); 
   font: 500 25px Inter; color: #222; box-shadow: 0 6px 18px rgba(0,0,0,.18); white-space: nowrap; }
 
 /* etiqueta rosa */
-.tag { display: inline-block; background: var(--rosa); font: 600 32px Inter; padding: 4px 14px; margin: 5px; border-radius: 4px; }
+.tag { display: inline-block; background: #f6a8c8; color: #2a1a1f; font: 600 32px/1 Poppins; padding: 7px 14px 8px; margin: 5px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,.18); }
 
 /* crachá */
 .cracha { position: absolute; width: 520px; border-radius: 22px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,.3); }

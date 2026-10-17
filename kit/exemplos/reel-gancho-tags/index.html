@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=block" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  #clip { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+  #etiquetas { position: absolute; left: 60px; right: 60px; top: 760px; text-align: center; }
+  .linha { margin: 14px 0; }
+  .tag { display: inline-block; background: #f6a8c8; color: #2a1a1f; font: 600 64px/1 Poppins; padding: 12px 22px 14px;
+    margin: 0 10px; border-radius: 6px; box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-start="0" data-duration="2.6" data-width="1080" data-height="1920">
+    <video id="clip" class="clip" src="../../fotos/gancho.mp4" muted playsinline data-start="0" data-duration="2.6" data-track-index="0"></video>
+    <div id="etiquetas" class="clip" data-start="0" data-duration="2.6" data-track-index="1">
+            <div class="linha"><span id="t0" class="tag" style="transform:rotate(-1.5deg)">por</span><span id="t1" class="tag" style="transform:rotate(-2deg)">que</span><span id="t2" class="tag" style="transform:rotate(1deg)">você</span></div>
+      <div class="linha"><span id="t3" class="tag" style="transform:rotate(2.5deg)">só</span><span id="t4" class="tag" style="transform:rotate(-3deg)">posta</span><span id="t5" class="tag" style="transform:rotate(-3deg)">de</span></div>
+      <div class="linha"><span id="t6" class="tag" style="transform:rotate(1.5deg)">manhã</span><span id="t7" class="tag" style="transform:rotate(-3deg)">e</span><span id="t8" class="tag" style="transform:rotate(-1.5deg)">depois</span></div>
+      <div class="linha"><span id="t9" class="tag" style="transform:rotate(1.5deg)">some?</span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#t0",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.08);
+    tl.fromTo("#t1",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.19);
+    tl.fromTo("#t2",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.30);
+    tl.fromTo("#t3",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.41);
+    tl.fromTo("#t4",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.52);
+    tl.fromTo("#t5",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.63);
+    tl.fromTo("#t6",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.74);
+    tl.fromTo("#t7",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.85);
+    tl.fromTo("#t8",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},0.96);
+    tl.fromTo("#t9",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.14,ease:"back.out(2.5)"},1.07);
+    window.__timelines["main"] = tl;
+  </script>
+</body>
+</html>
